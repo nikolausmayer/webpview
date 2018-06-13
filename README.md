@@ -15,9 +15,10 @@ Known issues
 * crashes if window is resized
 * is slow (single-threaded WebP decoding)
 * might not work if multiple images with different sizes are loaded
+* take a look at [this abomination of a Makefile](https://github.com/nikolausmayer/webpview/blob/master/Makefile#L51)
 * `¯\_(ツ)_/¯`
 
 License
 =======
-The webpview program core is under MIT license. [CImg](http://cimg.eu/)is under[CeCILL-C](Licence_CeCILL-C_V1-en.txt) license (open source, LGPL-like). WebP (downloaded during build) is under [WebM's](https://www.webmproject.org/license/software/) license.
+The webpview program core is under MIT license. [CImg](http://cimg.eu/) is under [CeCILL-C](Licence_CeCILL-C_V1-en.txt) license (open source, LGPL-like). WebP (downloaded during build) is under [WebM's](https://www.webmproject.org/license/software/) license.
 
