@@ -46,7 +46,12 @@ debug: webp $(TARGET)
 ## When in release mode, optimize
 release: CXXFLAGS += -O3
 release: BUILDMODE ?= RELEASE
-release: webp $(TARGET)
+release: cimg webp $(TARGET)
+
+cimg:
+	test -f v.2.2.3.tar.gz || wget https://github.com/dtschump/CImg/archive/v.2.2.3.tar.gz
+	test -d CImg-v.2.2.3 || tar xfz v.2.2.3.tar.gz
+	test -f src/CImg.h || cp CImg-v.2.2.3/CImg.h src/CImg.h
 
 webp:
 	test -f v0.5.1.tar.gz || wget https://github.com/webmproject/libwebp/archive/v0.5.1.tar.gz 
