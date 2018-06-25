@@ -74,15 +74,15 @@ $(TARGET): $(OBJECTS) webp Makefile
 
 ## Every object file depends on its source. It may also depend on
 ## potentially all header files, and of course the makefile itself.
-%.o: %.c webp Makefile $(HEADERS)
+%.o: %.c cimg webp Makefile $(HEADERS)
 	$(info ... compiling $@ ...)
 	$(CXX) $(CXXFLAGS) $(INCLUDE_DIRS) -c $< -o $@
 
-%.o: %.cc webp Makefile $(HEADERS)
+%.o: %.cc cimg webp Makefile $(HEADERS)
 	$(info ... compiling $@ ...)
 	$(CXX) $(CXXFLAGS) $(INCLUDE_DIRS) -c $< -o $@
 
-%.o: %.cpp webp Makefile $(HEADERS)
+%.o: %.cpp cimg webp Makefile $(HEADERS)
 	$(info ... compiling $@ ...)
 	$(CXX) $(CXXFLAGS) $(INCLUDE_DIRS) -c $< -o $@
 
