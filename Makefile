@@ -41,7 +41,7 @@ all: release
 ## When in debug mode, don't optimize, and create debug symbols
 debug: CXXFLAGS += -O0 -g -D_DEBUG
 debug: BUILDMODE ?= DEBUG
-debug: webp $(TARGET)
+debug: cimg webp $(TARGET)
 	
 ## When in release mode, optimize
 release: CXXFLAGS += -O3
